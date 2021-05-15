@@ -1,0 +1,1 @@
+editor.blade.php
