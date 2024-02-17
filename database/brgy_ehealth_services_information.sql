@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 13, 2021 at 06:07 AM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.9
+-- Generation Time: May 12, 2021 at 04:58 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -71,7 +70,8 @@ INSERT INTO `children` (`id`, `birth_order`, `firstname`, `middlename`, `lastnam
 (4, '1', 'child fname 5', 'child mname 5', 'child lname 5', '2021-02-13', '20', 'hospital', 'sagay city', 'male', NULL, 1, 0, NULL, '2019-02-12 16:00:00', '2021-02-11 16:00:00', NULL),
 (5, '1', 'child fname 2', 'child mname 2', 'child lname 2', '2021-02-13', '20', 'hospital', 'sagay city', 'male', NULL, 1, 0, NULL, '2020-02-12 16:00:00', '2021-02-11 16:00:00', NULL),
 (6, '1', 'child fname 3', 'child mname 3', 'child lname 3', '2021-02-13', '20', 'hospital', 'sagay city', 'male', NULL, 1, 1, NULL, '2020-02-12 16:00:00', '2021-02-11 16:00:00', NULL),
-(7, '1', 'child fname 4', 'child mname 4', 'child lname 4', '2021-02-13', '20', 'hospital', 'sagay city', 'male', NULL, 1, 1, NULL, '2020-02-12 16:00:00', '2021-02-11 16:00:00', NULL);
+(7, '1', 'child fname 4', 'child mname 4', 'child lname 4', '2021-02-13', '20', 'hospital', 'sagay city', 'male', NULL, 1, 1, NULL, '2020-02-12 16:00:00', '2021-02-11 16:00:00', NULL),
+(8, '1', 'fff', 'sample mname', 'sample1', '2021-02-01', '45', 'rfrf', 'ffr', 'male', NULL, 6, 0, NULL, '2021-02-16 16:48:33', '2021-02-16 16:48:33', NULL);
 
 -- --------------------------------------------------------
 
@@ -117,7 +117,9 @@ INSERT INTO `fathers` (`id`, `firstname`, `middlename`, `lastname`, `birthdate`,
 (3, 'Ronaldo', 'Dogdog', 'Recibidos', '1998-04-18', 'Toboso, Neg. Occ.', '09469572178', '2021-01-11 19:33:41', '2021-01-18 18:21:30', NULL),
 (4, 'Ronaldo', 'Dogdog', 'Recibido', '1998-04-18', 'Toboso, Neg. Occ.', '09787778668', '2021-01-11 22:00:37', '2021-01-11 22:00:37', NULL),
 (5, 'Navin', 'unknown', 'Bendicio', '1992-10-20', 'Toboso, Neg. Occ.', '09469572178', '2021-01-16 20:31:41', '2021-01-16 20:31:41', NULL),
-(6, 'Ronald', 'Recibido', 'sample1', '1994-05-07', 'Sagay City, neg. occ.', '09469572178', '2021-01-19 23:07:27', '2021-01-19 23:07:27', NULL);
+(6, 'Ronald', 'Recibido', 'sample1', '1994-05-07', 'Sagay City, neg. occ.', '09469572178', '2021-01-19 23:07:27', '2021-01-19 23:07:27', NULL),
+(7, 'dd', 'dd', 'xx', '1995-05-07', 'sagay city', 'dd', '2021-02-16 16:31:05', '2021-02-16 16:31:05', NULL),
+(8, 'Ronald', 'Recibido', 'sample1', '0222-02-22', 'Sagay City, Neg. Occ.', '09469572178', '2021-03-01 14:55:59', '2021-03-01 14:55:59', NULL);
 
 -- --------------------------------------------------------
 
@@ -161,7 +163,10 @@ INSERT INTO `immunizations` (`id`, `return_date`, `date_conduct`, `data`, `recor
 (33, '2021-02-22', '2021-01-31', '{\"date\":\"2021-01-31\",\"vaccine_date\":\"2021-01-31\",\"return_date\":\"2021-02-22\",\"tags\":\"hepab\",\"vaccine_title\":\"HEPATITIS B\",\"vaccine_dose\":\"1st\",\"baby_age\":\"Just born\",\"remarks\":\"<ol><li>Honey Bee<\\/li><li>Dogomeo<\\/li><\\/ol>\"}', '1st', 'with-data', 1, '2021-01-31 04:49:56', '2021-01-31 04:49:56'),
 (34, '2021-02-23', '2021-01-31', '{\"date\":\"2021-01-31\",\"vaccine_date\":\"2021-01-25\",\"return_date\":\"2021-02-23\",\"tags\":\"pv\",\"vaccine_title\":\"PENTAVALENT VACCINE (DPT-Hep B-HiB)\",\"vaccine_dose\":\"1st\",\"baby_age\":\"2 1\\/2 Months\",\"remarks\":null}', '1st', 'with-data', 1, '2021-01-31 05:54:05', '2021-01-31 05:56:58'),
 (35, '2021-02-28', '2021-01-31', '{\"date\":\"2021-01-31\",\"vaccine_date\":\"2021-01-31\",\"return_date\":\"2021-02-28\",\"tags\":\"pv\",\"vaccine_title\":\"PENTAVALENT VACCINE (DPT-Hep B-HiB)\",\"vaccine_dose\":\"2nd\",\"baby_age\":\"2 1\\/2 Months\",\"remarks\":\"<ol><li>vsdfsdgsdfg<\\/li><li>sdfgsdfgsdfg<\\/li><li>sdgsdf<\\/li><\\/ol>\"}', '1st', 'with-data', 1, '2021-01-31 05:57:26', '2021-01-31 05:57:36'),
-(36, NULL, '2021-01-31', '{\"date\":\"2021-01-31\",\"vaccine_date\":\"\",\"return_date\":\"\",\"tags\":\"pv\",\"vaccine_title\":\"PENTAVALENT VACCINE (DPT-Hep B-HiB)\",\"vaccine_dose\":\"3rd\",\"baby_age\":\"\",\"remarks\":\"\"}', '1st', 'no-data', 1, '2021-01-31 05:57:47', '2021-01-31 05:57:47');
+(36, NULL, '2021-01-31', '{\"date\":\"2021-01-31\",\"vaccine_date\":\"\",\"return_date\":\"\",\"tags\":\"pv\",\"vaccine_title\":\"PENTAVALENT VACCINE (DPT-Hep B-HiB)\",\"vaccine_dose\":\"3rd\",\"baby_age\":\"\",\"remarks\":\"\"}', '1st', 'no-data', 1, '2021-01-31 05:57:47', '2021-01-31 05:57:47'),
+(37, NULL, '2021-02-16', '{\"date\":\"2021-02-16\",\"vaccine_date\":\"\",\"return_date\":\"\",\"tags\":\"bcg\",\"vaccine_title\":\"BCG\",\"vaccine_dose\":\"1st\",\"baby_age\":\"\",\"remarks\":\"\"}', '1st', 'no-data', 8, '2021-02-16 16:50:30', '2021-02-16 16:50:30'),
+(38, '2021-02-20', '2021-02-16', '{\"date\":\"2021-02-16\",\"vaccine_date\":\"2021-02-16\",\"return_date\":\"2021-02-20\",\"tags\":\"hepab\",\"vaccine_title\":\"HEPATITIS B\",\"vaccine_dose\":\"1st\",\"baby_age\":\"Just born\",\"remarks\":null}', '1st', 'with-data', 8, '2021-02-16 16:50:50', '2021-02-16 16:50:50'),
+(39, NULL, '2021-02-16', '{\"date\":\"2021-02-16\",\"vaccine_date\":\"\",\"return_date\":\"\",\"tags\":\"pv\",\"vaccine_title\":\"PENTAVALENT VACCINE (DPT-Hep B-HiB)\",\"vaccine_dose\":\"1st\",\"baby_age\":\"\",\"remarks\":\"\"}', '1st', 'no-data', 8, '2021-02-16 16:51:37', '2021-02-16 16:51:37');
 
 -- --------------------------------------------------------
 
@@ -241,7 +246,9 @@ INSERT INTO `mothers` (`id`, `firstname`, `middlename`, `lastname`, `birthdate`,
 (2, 'Ronalda', 'Awaw', 'Morados', '1994-05-07', 'wala lang', '34563456', 'married', '2021-01-11 05:24:05', '2021-01-11 05:24:05', NULL),
 (3, 'ronalda', 'Recibido', 'Dogomeo', '1992-09-16', 'Toboso, Neg. Occ.', '09098767878', 'married', '2021-01-11 19:33:41', '2021-01-18 07:09:08', NULL),
 (4, 'Theresa', 'Recibido', 'Dogomeo', '1992-09-16', 'Toboso, Neg. Occ.', '0909878778', 'single', '2021-01-16 20:31:40', '2021-01-16 20:31:40', NULL),
-(5, 'sample fname', 'sample mname', 'sample1', '1998-04-18', 'Sagay City, neg. occ.', '1212122121212', 'married', '2021-01-19 23:07:27', '2021-01-19 23:07:27', NULL);
+(5, 'sample fname', 'sample mname', 'sample1', '1998-04-18', 'Sagay City, neg. occ.', '1212122121212', 'married', '2021-01-19 23:07:27', '2021-01-19 23:07:27', NULL),
+(6, 'xx', 'xx', 'xx', '1999-05-07', 'sagay city', '09385052080', 'married', '2021-02-16 16:31:05', '2021-02-16 16:31:05', NULL),
+(7, 'rina', 'p', 'manigos', '1997-02-28', 'Sagay City, Neg. Occ.', '09096217580', 'married', '2021-03-01 14:55:59', '2021-03-01 14:55:59', NULL);
 
 -- --------------------------------------------------------
 
@@ -267,7 +274,9 @@ INSERT INTO `parents` (`id`, `mother_id`, `father_id`, `created_at`, `updated_at
 (3, 3, 3, '2021-01-11 19:33:41', '2021-01-11 19:33:41'),
 (4, 3, 4, '2021-01-11 22:00:37', '2021-01-11 22:00:37'),
 (5, 4, 5, '2021-01-16 20:31:41', '2021-01-16 20:31:41'),
-(6, 5, 6, '2021-01-19 23:07:27', '2021-01-19 23:07:27');
+(6, 5, 6, '2021-01-19 23:07:27', '2021-01-19 23:07:27'),
+(7, 6, 7, '2021-02-16 16:31:05', '2021-02-16 16:31:05'),
+(8, 7, 8, '2021-03-01 14:55:59', '2021-03-01 14:55:59');
 
 -- --------------------------------------------------------
 
@@ -300,7 +309,10 @@ INSERT INTO `pregnants` (`id`, `pregnant_no`, `weight`, `last_period`, `expected
 (3, 'iCv7S0LOmNAVQIZ', '56', '2020-01-10', '2021-06-02', 0, 0, NULL, NULL, 3, '2020-01-11 19:33:42', '2021-01-11 19:33:42'),
 (4, 'SCvbsL9mYHdTHX9', '60', '2020-08-26', '2021-06-02', 0, 0, NULL, NULL, 3, '2021-01-11 22:00:37', '2021-01-19 18:21:56'),
 (5, 'JpXJgKJfbaJxnat', '45', '2020-10-20', '2021-07-27', 0, 0, NULL, NULL, 4, '2021-01-16 20:31:41', '2021-01-16 20:31:41'),
-(6, 'EwIEQ5ZxnRwEJGH', '45', '2020-08-26', '2021-06-02', 1, 1, '2021-01-20', 'sdfsg', 5, '2021-01-19 23:07:27', '2021-01-19 23:11:52');
+(6, 'EwIEQ5ZxnRwEJGH', '45', '2020-08-26', '2021-06-02', 1, 1, '2021-01-20', 'sdfsg', 5, '2021-01-19 23:07:27', '2021-01-19 23:11:52'),
+(7, 'CuDqrDCQw59Srbc', '50', '2020-08-04', '2021-05-11', 0, 0, NULL, NULL, 6, '2021-02-16 16:31:05', '2021-02-16 16:31:05'),
+(8, 'j2ybs2VXb6aqJV8', '50', '2020-08-24', '2021-05-31', 1, 1, '2021-02-16', NULL, 5, '2021-02-16 16:37:33', '2021-02-16 16:43:40'),
+(9, '1QqBQJzEejDbE4N', '60', '2020-12-28', '2021-10-05', 0, 0, NULL, NULL, 7, '2021-03-01 14:55:59', '2021-03-01 14:55:59');
 
 -- --------------------------------------------------------
 
@@ -362,7 +374,19 @@ INSERT INTO `prenatals` (`id`, `return_date`, `date_conduct`, `data`, `checkup_o
 (72, NULL, '2021-01-20', '{\"date\":\"2021-01-20\",\"weight\":\"\",\"height\":\"\",\"age_of_gestation\":\"\",\"blood_pressure\":\"\",\"nutritional_status\":\"\",\"return_date\":\"\",\"health_service_provider\":\"\",\"hospital_referral\":\"\",\"dental_checkup\":\"\",\"urinalysis\":\"\",\"treatments\":\"\",\"complete_blood_count\":\"\",\"laboratory_test_done\":\"\",\"make_a_birth_plan\":\"\",\"hemoglobin_count\":\"\",\"stool_examination\":\"\",\"acetic_acid_wash\":\"\",\"tetanus_containing_vaccine\":\"\",\"date_given\":\"\",\"stis_sundromic_aaproach\":{\"syphilis\":false,\"hiv\":false,\"hepatits_b\":false},\"discussion_services_given\":{\"avoid_alcohol\":false,\"advises_foods\":false,\"advises_sex_safe\":false,\"right_use_of_insecticide\":false,\"birth_plan\":false}}', '1', '1st', 5, 'no-data', '2021-01-19 23:15:20', '2021-01-19 23:15:20'),
 (73, NULL, '2021-01-20', '{\"date\":\"2021-01-20\",\"weight\":\"\",\"height\":\"\",\"age_of_gestation\":\"\",\"blood_pressure\":\"\",\"nutritional_status\":\"\",\"return_date\":\"\",\"health_service_provider\":\"\",\"hospital_referral\":\"\",\"dental_checkup\":\"\",\"urinalysis\":\"\",\"treatments\":\"\",\"complete_blood_count\":\"\",\"laboratory_test_done\":\"\",\"make_a_birth_plan\":\"\",\"hemoglobin_count\":\"\",\"stool_examination\":\"\",\"acetic_acid_wash\":\"\",\"tetanus_containing_vaccine\":\"\",\"date_given\":\"\",\"stis_sundromic_aaproach\":{\"syphilis\":false,\"hiv\":false,\"hepatits_b\":false},\"discussion_services_given\":{\"avoid_alcohol\":false,\"advises_foods\":false,\"advises_sex_safe\":false,\"right_use_of_insecticide\":false,\"birth_plan\":false}}', '2', '1st', 5, 'no-data', '2021-01-19 23:15:24', '2021-01-19 23:15:24'),
 (74, '2021-02-22', '2021-01-20', '{\"date\":\"2021-01-20\",\"sample\":\"2020-02-20\",\"weight\":\"46\",\"height\":\"6\",\"age_of_gestation\":\"22\",\"blood_pressure\":null,\"nutritional_status\":null,\"return_date\":\"2021-02-22\",\"health_service_provider\":null,\"hospital_referral\":null,\"dental_checkup\":null,\"urinalysis\":null,\"treatments\":null,\"complete_blood_count\":null,\"laboratory_test_done\":null,\"make_a_birth_plan\":null,\"hemoglobin_count\":null,\"stool_examination\":null,\"acetic_acid_wash\":null,\"tetanus_containing_vaccine\":null,\"date_given\":null,\"stis_sundromic_aaproach\":{\"syphilis\":\"false\",\"hiv\":\"false\",\"hepatits_b\":\"false\"},\"discussion_services_given\":{\"avoid_alcohol\":\"false\",\"advises_foods\":\"false\",\"advises_sex_safe\":\"false\",\"right_use_of_insecticide\":\"false\",\"birth_plan\":\"false\"}}', '3', '1st', 5, 'with-data', '2021-01-19 23:15:28', '2021-01-19 23:19:27'),
-(75, NULL, '2021-02-01', '{\"date\":\"2021-02-01\",\"weight\":\"\",\"height\":\"\",\"age_of_gestation\":\"\",\"blood_pressure\":\"\",\"nutritional_status\":\"\",\"return_date\":\"\",\"health_service_provider\":\"\",\"hospital_referral\":\"\",\"dental_checkup\":\"\",\"urinalysis\":\"\",\"treatments\":\"\",\"complete_blood_count\":\"\",\"laboratory_test_done\":\"\",\"make_a_birth_plan\":\"\",\"hemoglobin_count\":\"\",\"stool_examination\":\"\",\"acetic_acid_wash\":\"\",\"tetanus_containing_vaccine\":\"\",\"date_given\":\"\",\"stis_sundromic_aaproach\":{\"syphilis\":false,\"hiv\":false,\"hepatits_b\":false},\"discussion_services_given\":{\"avoid_alcohol\":false,\"advises_foods\":false,\"advises_sex_safe\":false,\"right_use_of_insecticide\":false,\"birth_plan\":false}}', '3', '1st', 1, 'no-data', '2021-01-31 23:12:26', '2021-01-31 23:12:26');
+(75, NULL, '2021-02-01', '{\"date\":\"2021-02-01\",\"weight\":\"\",\"height\":\"\",\"age_of_gestation\":\"\",\"blood_pressure\":\"\",\"nutritional_status\":\"\",\"return_date\":\"\",\"health_service_provider\":\"\",\"hospital_referral\":\"\",\"dental_checkup\":\"\",\"urinalysis\":\"\",\"treatments\":\"\",\"complete_blood_count\":\"\",\"laboratory_test_done\":\"\",\"make_a_birth_plan\":\"\",\"hemoglobin_count\":\"\",\"stool_examination\":\"\",\"acetic_acid_wash\":\"\",\"tetanus_containing_vaccine\":\"\",\"date_given\":\"\",\"stis_sundromic_aaproach\":{\"syphilis\":false,\"hiv\":false,\"hepatits_b\":false},\"discussion_services_given\":{\"avoid_alcohol\":false,\"advises_foods\":false,\"advises_sex_safe\":false,\"right_use_of_insecticide\":false,\"birth_plan\":false}}', '3', '1st', 1, 'no-data', '2021-01-31 23:12:26', '2021-01-31 23:12:26'),
+(76, NULL, '2021-02-16', '{\"date\":\"2021-02-16\",\"weight\":\"\",\"height\":\"\",\"age_of_gestation\":\"\",\"blood_pressure\":\"\",\"nutritional_status\":\"\",\"return_date\":\"\",\"health_service_provider\":\"\",\"hospital_referral\":\"\",\"dental_checkup\":\"\",\"urinalysis\":\"\",\"treatments\":\"\",\"complete_blood_count\":\"\",\"laboratory_test_done\":\"\",\"make_a_birth_plan\":\"\",\"hemoglobin_count\":\"\",\"stool_examination\":\"\",\"acetic_acid_wash\":\"\",\"tetanus_containing_vaccine\":\"\",\"date_given\":\"\",\"stis_sundromic_aaproach\":{\"syphilis\":false,\"hiv\":false,\"hepatits_b\":false},\"discussion_services_given\":{\"avoid_alcohol\":false,\"advises_foods\":false,\"advises_sex_safe\":false,\"right_use_of_insecticide\":false,\"birth_plan\":false}}', '1', '1st', 8, 'no-data', '2021-02-16 16:40:01', '2021-02-16 16:40:01'),
+(77, '2021-02-17', '2021-02-16', '{\"date\":\"2021-02-16\",\"weight\":\"45\",\"height\":\"45\",\"age_of_gestation\":\"2\",\"blood_pressure\":\"90\\/80\",\"nutritional_status\":\"Normal\",\"return_date\":\"2021-02-17\",\"health_service_provider\":null,\"hospital_referral\":null,\"dental_checkup\":null,\"urinalysis\":null,\"treatments\":null,\"complete_blood_count\":null,\"laboratory_test_done\":null,\"make_a_birth_plan\":\"<ol><li>www<\\/li><li>ww<\\/li><\\/ol>\",\"hemoglobin_count\":null,\"stool_examination\":null,\"acetic_acid_wash\":null,\"tetanus_containing_vaccine\":null,\"date_given\":null,\"stis_sundromic_aaproach\":{\"syphilis\":\"true\",\"hiv\":\"true\",\"hepatits_b\":\"true\"},\"discussion_services_given\":{\"avoid_alcohol\":\"false\",\"advises_foods\":\"false\",\"advises_sex_safe\":\"false\",\"right_use_of_insecticide\":\"false\",\"birth_plan\":\"false\"}}', '2', '1st', 8, 'with-data', '2021-02-16 16:42:20', '2021-02-16 16:42:20'),
+(78, NULL, '2021-02-16', '{\"date\":\"2021-02-16\",\"weight\":\"\",\"height\":\"\",\"age_of_gestation\":\"\",\"blood_pressure\":\"\",\"nutritional_status\":\"\",\"return_date\":\"\",\"health_service_provider\":\"\",\"hospital_referral\":\"\",\"dental_checkup\":\"\",\"urinalysis\":\"\",\"treatments\":\"\",\"complete_blood_count\":\"\",\"laboratory_test_done\":\"\",\"make_a_birth_plan\":\"\",\"hemoglobin_count\":\"\",\"stool_examination\":\"\",\"acetic_acid_wash\":\"\",\"tetanus_containing_vaccine\":\"\",\"date_given\":\"\",\"stis_sundromic_aaproach\":{\"syphilis\":false,\"hiv\":false,\"hepatits_b\":false},\"discussion_services_given\":{\"avoid_alcohol\":false,\"advises_foods\":false,\"advises_sex_safe\":false,\"right_use_of_insecticide\":false,\"birth_plan\":false}}', '3', '1st', 8, 'no-data', '2021-02-16 16:42:31', '2021-02-16 16:42:31'),
+(79, NULL, '2021-02-16', '{\"date\":\"2021-02-16\",\"weight\":\"\",\"height\":\"\",\"age_of_gestation\":\"\",\"blood_pressure\":\"\",\"nutritional_status\":\"\",\"return_date\":\"\",\"health_service_provider\":\"\",\"hospital_referral\":\"\",\"dental_checkup\":\"\",\"urinalysis\":\"\",\"complete_blood_count\":\"\",\"laboratory_test_done\":\"\",\"changes_birthplan\":\"\",\"pregnant_situation\":\"\",\"advice_given\":\"\",\"etiologic_test_if_needed\":\"\",\"pap_smear_if_needed\":\"\",\"gestational_diabetes_if_needed\":\"\",\"bacteriuria_if_needed\":\"\",\"treatments\":\"\",\"discussion_services_given\":{\"reminder_previous_discussion\":false}}', '1', '2nd', 8, 'no-data', '2021-02-16 16:42:35', '2021-02-16 16:42:35'),
+(80, NULL, '2021-02-16', '{\"date\":\"2021-02-16\",\"weight\":\"\",\"height\":\"\",\"age_of_gestation\":\"\",\"blood_pressure\":\"\",\"nutritional_status\":\"\",\"return_date\":\"\",\"health_service_provider\":\"\",\"hospital_referral\":\"\",\"dental_checkup\":\"\",\"urinalysis\":\"\",\"complete_blood_count\":\"\",\"laboratory_test_done\":\"\",\"changes_birthplan\":\"\",\"pregnant_situation\":\"\",\"advice_given\":\"\",\"etiologic_test_if_needed\":\"\",\"pap_smear_if_needed\":\"\",\"gestational_diabetes_if_needed\":\"\",\"bacteriuria_if_needed\":\"\",\"treatments\":\"\",\"discussion_services_given\":{\"reminder_previous_discussion\":false}}', '2', '2nd', 8, 'no-data', '2021-02-16 16:42:40', '2021-02-16 16:42:40'),
+(81, NULL, '2021-02-16', '{\"date\":\"2021-02-16\",\"weight\":\"\",\"height\":\"\",\"age_of_gestation\":\"\",\"blood_pressure\":\"\",\"nutritional_status\":\"\",\"return_date\":\"\",\"health_service_provider\":\"\",\"hospital_referral\":\"\",\"dental_checkup\":\"\",\"urinalysis\":\"\",\"complete_blood_count\":\"\",\"laboratory_test_done\":\"\",\"changes_birthplan\":\"\",\"pregnant_situation\":\"\",\"advice_given\":\"\",\"etiologic_test_if_needed\":\"\",\"pap_smear_if_needed\":\"\",\"gestational_diabetes_if_needed\":\"\",\"bacteriuria_if_needed\":\"\",\"treatments\":\"\",\"discussion_services_given\":{\"reminder_previous_discussion\":false}}', '3', '2nd', 8, 'no-data', '2021-02-16 16:42:43', '2021-02-16 16:42:43'),
+(82, NULL, '2021-02-16', '{\"date\":\"2021-02-16\",\"weight\":\"\",\"height\":\"\",\"age_of_gestation\":\"\",\"blood_pressure\":\"\",\"nutritional_status\":\"\",\"return_date\":\"\",\"health_service_provider\":\"\",\"hospital_referral\":\"\",\"dental_checkup\":\"\",\"urinalysis\":\"\",\"complete_blood_count\":\"\",\"laboratory_test_done\":\"\",\"changes_birthplan\":\"\",\"pregnant_situation\":\"\",\"advice_given\":\"\",\"blood_rh_if_needed\":\"\",\"bacteriuria_if_needed\":\"\",\"treatments\":\"\",\"discussion_services_given\":{\"reminder_previous_discussion\":false,\"dsg_reminder_postpartum\":false,\"dsg_agwat_ng_anak\":false,\"dsg_tetanus_follow_up\":false}}', '1', '3rd', 8, 'no-data', '2021-02-16 16:42:48', '2021-02-16 16:42:48'),
+(83, NULL, '2021-02-16', '{\"date\":\"2021-02-16\",\"weight\":\"\",\"height\":\"\",\"age_of_gestation\":\"\",\"blood_pressure\":\"\",\"nutritional_status\":\"\",\"return_date\":\"\",\"health_service_provider\":\"\",\"hospital_referral\":\"\",\"dental_checkup\":\"\",\"urinalysis\":\"\",\"complete_blood_count\":\"\",\"laboratory_test_done\":\"\",\"changes_birthplan\":\"\",\"pregnant_situation\":\"\",\"advice_given\":\"\",\"blood_rh_if_needed\":\"\",\"bacteriuria_if_needed\":\"\",\"treatments\":\"\",\"discussion_services_given\":{\"reminder_previous_discussion\":false,\"dsg_reminder_postpartum\":false,\"dsg_agwat_ng_anak\":false,\"dsg_tetanus_follow_up\":false}}', '2', '3rd', 8, 'no-data', '2021-02-16 16:42:52', '2021-02-16 16:42:52'),
+(84, '2021-02-20', '2021-02-16', '{\"date\":\"2021-02-16\",\"weight\":\"556\",\"height\":\"65\",\"age_of_gestation\":\"5\",\"blood_pressure\":\"90\\/80\",\"nutritional_status\":\"Under Weight\",\"return_date\":\"2021-02-20\",\"health_service_provider\":null,\"hospital_referral\":null,\"dental_checkup\":null,\"urinalysis\":null,\"complete_blood_count\":null,\"laboratory_test_done\":null,\"changes_birthplan\":null,\"pregnant_situation\":null,\"advice_given\":null,\"blood_rh_if_needed\":null,\"bacteriuria_if_needed\":null,\"treatments\":null,\"discussion_services_given\":{\"reminder_previous_discussion\":\"true\",\"dsg_reminder_postpartum\":\"true\",\"dsg_agwat_ng_anak\":\"true\",\"dsg_tetanus_follow_up\":\"true\"}}', '3', '3rd', 8, 'with-data', '2021-02-16 16:42:56', '2021-02-16 16:43:26'),
+(85, NULL, '2021-03-01', '{\"date\":\"2021-03-01\",\"weight\":\"\",\"height\":\"\",\"age_of_gestation\":\"\",\"blood_pressure\":\"\",\"nutritional_status\":\"\",\"return_date\":\"\",\"health_service_provider\":\"\",\"hospital_referral\":\"\",\"dental_checkup\":\"\",\"urinalysis\":\"\",\"treatments\":\"\",\"complete_blood_count\":\"\",\"laboratory_test_done\":\"\",\"make_a_birth_plan\":\"\",\"hemoglobin_count\":\"\",\"stool_examination\":\"\",\"acetic_acid_wash\":\"\",\"tetanus_containing_vaccine\":\"\",\"date_given\":\"\",\"stis_sundromic_aaproach\":{\"syphilis\":false,\"hiv\":false,\"hepatits_b\":false},\"discussion_services_given\":{\"avoid_alcohol\":false,\"advises_foods\":false,\"advises_sex_safe\":false,\"right_use_of_insecticide\":false,\"birth_plan\":false}}', '1', '1st', 9, 'no-data', '2021-03-01 14:57:15', '2021-03-01 14:57:15'),
+(86, NULL, '2021-03-01', '{\"date\":\"2021-03-01\",\"weight\":\"\",\"height\":\"\",\"age_of_gestation\":\"\",\"blood_pressure\":\"\",\"nutritional_status\":\"\",\"return_date\":\"\",\"health_service_provider\":\"\",\"hospital_referral\":\"\",\"dental_checkup\":\"\",\"urinalysis\":\"\",\"treatments\":\"\",\"complete_blood_count\":\"\",\"laboratory_test_done\":\"\",\"make_a_birth_plan\":\"\",\"hemoglobin_count\":\"\",\"stool_examination\":\"\",\"acetic_acid_wash\":\"\",\"tetanus_containing_vaccine\":\"\",\"date_given\":\"\",\"stis_sundromic_aaproach\":{\"syphilis\":false,\"hiv\":false,\"hepatits_b\":false},\"discussion_services_given\":{\"avoid_alcohol\":false,\"advises_foods\":false,\"advises_sex_safe\":false,\"right_use_of_insecticide\":false,\"birth_plan\":false}}', '2', '1st', 9, 'no-data', '2021-03-01 15:02:20', '2021-03-01 15:02:20'),
+(87, NULL, '2021-03-01', '{\"date\":\"2021-03-01\",\"weight\":\"\",\"height\":\"\",\"age_of_gestation\":\"\",\"blood_pressure\":\"\",\"nutritional_status\":\"\",\"return_date\":\"\",\"health_service_provider\":\"\",\"hospital_referral\":\"\",\"dental_checkup\":\"\",\"urinalysis\":\"\",\"treatments\":\"\",\"complete_blood_count\":\"\",\"laboratory_test_done\":\"\",\"make_a_birth_plan\":\"\",\"hemoglobin_count\":\"\",\"stool_examination\":\"\",\"acetic_acid_wash\":\"\",\"tetanus_containing_vaccine\":\"\",\"date_given\":\"\",\"stis_sundromic_aaproach\":{\"syphilis\":false,\"hiv\":false,\"hepatits_b\":false},\"discussion_services_given\":{\"avoid_alcohol\":false,\"advises_foods\":false,\"advises_sex_safe\":false,\"right_use_of_insecticide\":false,\"birth_plan\":false}}', '3', '1st', 9, 'no-data', '2021-03-01 15:02:26', '2021-03-01 15:02:26');
 
 -- --------------------------------------------------------
 
@@ -388,9 +412,8 @@ CREATE TABLE `reset_passwords` (
 
 INSERT INTO `reset_passwords` (`id`, `reset_token`, `new_password`, `is_expired`, `is_resetted`, `expired_date`, `user_id`, `created_at`, `updated_at`) VALUES
 (1, '3ade09c9828efca9a5628c85562e9fc4937a74ebd514bad80a0a35bb26460c2c', NULL, 0, 1, NULL, 2, '2021-01-10 22:56:06', '2021-01-10 22:57:26'),
-(2, '9adf7656b1dda89e1fd9309563a71598a18eaf0345e0889a9ff12615e30bfe0c', NULL, 0, 1, NULL, 4, '2021-01-11 19:10:58', '2021-01-11 19:11:16'),
-(3, '2eca561548d88e9880de18bf60b84f49220b29791aa5dad6e3bdf7b3ec190512', NULL, 0, 1, NULL, 4, '2021-01-19 18:26:42', '2021-01-19 18:27:10'),
-(4, 'fa5c9cdd732fbc1fea8f351300d820e2b18f526044680dfedd0d9430c48c5124', NULL, 0, 1, NULL, 4, '2021-01-19 23:30:50', '2021-01-19 23:31:11');
+(5, 'e748a81ef37a39d7585b812427e9a3d0438dbf91e2b6d874fe7a8032649752b0', NULL, 1, 0, '2021-02-16 08:24:27', 2, '2021-02-16 16:13:12', '2021-02-16 16:24:27'),
+(6, '8cef6dd05a3266100bf071d68ad8dcb528a5657109b0fc348a31ac4ea3cbd931', NULL, 1, 0, '2021-02-16 09:10:26', 1, '2021-02-16 17:07:57', '2021-02-16 17:10:26');
 
 -- --------------------------------------------------------
 
@@ -400,7 +423,7 @@ INSERT INTO `reset_passwords` (`id`, `reset_token`, `new_password`, `is_expired`
 
 CREATE TABLE `settings` (
   `id` int(10) UNSIGNED NOT NULL,
-  `type` enum('system-status') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` enum('system-status','population','sms-format-prenatal','sms-format-immunize') COLLATE utf8mb4_unicode_ci NOT NULL,
   `remarks` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `data` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -412,7 +435,10 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `type`, `remarks`, `data`, `created_at`, `updated_at`) VALUES
-(1, 'system-status', 'System is Active!', '{\"system-status\":\"Active\",\"date-update\":\"2021-02-11 18:02:18\"}', '2021-02-11 09:43:39', '2021-02-11 10:18:12');
+(1, 'system-status', 'System is Active!', '{\"system-status\":\"Active\",\"date-update\":\"2021-02-16 08:02:14\"}', '2021-02-11 09:43:39', '2021-02-16 16:14:05'),
+(2, 'population', '', '{\"women\":\"900\",\"children\":\"600\"}', '2021-02-15 10:38:48', '2021-02-15 10:41:30'),
+(3, 'sms-format-prenatal', '', '{\"sms_format\":\"this is sample sample\"}', '2021-02-15 11:06:59', '2021-02-15 11:09:19'),
+(4, 'sms-format-immunize', '', '{\"sms_format\":\"sdfsdfsdf\"}', '2021-02-15 11:18:47', '2021-02-15 11:18:47');
 
 -- --------------------------------------------------------
 
@@ -424,6 +450,7 @@ CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `email` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `username` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `default_password` varchar(16) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `profile` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -444,11 +471,9 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `username`, `email_verified_at`, `password`, `profile`, `employee_id`, `fullname`, `birthdate`, `address`, `contact`, `hired_date`, `is_active`, `role`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin@system.app', '102014', NULL, '$2y$10$idIxN/7ncKufWd1JfbF9i.ZdjJRsOvNCqhk5/6eQZHgIeR3mDsgLO', 'public/uploaded/profile/c4ca4238a0b923820dcc509a6f75849b/f886a3086dab40c21d85893effbfe63a.png', '102014', 'Ronald R. Dogomeo', '1994-05-07', 'Toboso, Neg. Occ.', '09006217580', '2019-11-12', 1, 'admin', 'QfVlYI8kHMxRv8n1cjhQMqddH2K3KdRTRZ9N8zDZyf1ybOvmORNARN9nOgNu', '2021-01-08 06:04:59', '2021-02-10 09:18:12'),
-(2, 'naldo@user.dev', 'USER102014', NULL, '$2y$10$z41mJHdwoPZidhQl5m60Ce/6nAAQbC7Jz/4vNsCu9jFBnDP.fCI0C', 'public/uploaded/profile/c81e728d9d4c2f636f067f89cc14862c/51a6dcc1b2b33fdd720fa591fe54156d.png', 'USER102014', 'Naldo A. Recibido', '1994-05-07', 'Sagay City, Neg. Occ.', '09469572178', '2014-10-20', 1, 'user', 'ZDmk5I2pL38sXSuRj65SVOvCBhipxng9yVIUS5lb8LUwtJ1XG6y8bac9RHJX', '2021-01-08 06:08:20', '2021-02-03 05:44:26'),
-(3, 'ron@user.dev', 'USER574', NULL, '$2y$10$TqdlnlCZAVp5QNvSv81NnuqnKVbeoT6h4o0.maVQe/1GArBsRYZq2', NULL, 'USER574', 'Ron ron', '1994-05-07', 'Sagay City, neg. occ.', '09098765163', '2014-10-20', 1, 'user', NULL, '2021-01-10 23:06:23', '2021-02-03 08:14:54'),
-(4, 'dogomeo@prog.dev', 'USER5794102014', NULL, '$2y$10$ozawa.trC64aePy543AgGeSxgXmMdvTU5oZvzs6oOE9REjD7h4SvS', 'public/uploaded/profile/a87ff679a2f3e71d9181a67b7542122c/3fad5fb94c381d2867a1930e3764ec67.png', 'USER5794102014', 'Ronaldo Dogomeo', '1994-05-07', 'Sagay City, neg. occ.xxx', '09098735216', '2020-12-31', 1, 'user', 'Xd3ycRDYogZ10reSOwvtnDTCzm4pPoKzziQoDiKcI8RXgQkW3ix0sekcMOvA', '2021-01-10 23:09:28', '2021-01-19 23:31:11');
+INSERT INTO `users` (`id`, `email`, `username`, `default_password`, `email_verified_at`, `password`, `profile`, `employee_id`, `fullname`, `birthdate`, `address`, `contact`, `hired_date`, `is_active`, `role`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'admin@system.app', '102014', NULL, NULL, '$2y$10$idIxN/7ncKufWd1JfbF9i.ZdjJRsOvNCqhk5/6eQZHgIeR3mDsgLO', 'public/uploaded/profile/c4ca4238a0b923820dcc509a6f75849b/f886a3086dab40c21d85893effbfe63a.png', '102014', 'xx xx', '1994-05-07', 'Toboso, Neg. Occ.', '09006217580', '2019-11-12', 1, 'admin', 'aWxO2u90OGScSjCIPlySF1E6ajw2H0IaFUFjC7onFtD6887WlHZryUq9Tu8y', '2021-01-08 06:04:59', '2021-02-16 17:05:55'),
+(2, 'sample@user.dev', 'USER102014', NULL, NULL, '$2y$10$z41mJHdwoPZidhQl5m60Ce/6nAAQbC7Jz/4vNsCu9jFBnDP.fCI0C', 'public/uploaded/profile/c81e728d9d4c2f636f067f89cc14862c/51a6dcc1b2b33fdd720fa591fe54156d.png', 'USER102014', 'Spencer Sornido', '1994-05-07', 'Sagay City, Neg. Occ.', '09469572178', '2014-10-20', 1, 'user', '8OKIxkR5Vjyszg7jAfNwWNm1ot6WjWhfKDVbB9FMlISQkFjQVz1GYs8MSt1Q', '2021-01-08 06:08:20', '2021-02-18 15:16:39');
 
 -- --------------------------------------------------------
 
@@ -584,7 +609,7 @@ ALTER TABLE `activities`
 -- AUTO_INCREMENT for table `children`
 --
 ALTER TABLE `children`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -596,13 +621,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `fathers`
 --
 ALTER TABLE `fathers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `immunizations`
 --
 ALTER TABLE `immunizations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `messages`
@@ -620,43 +645,43 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `mothers`
 --
 ALTER TABLE `mothers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `parents`
 --
 ALTER TABLE `parents`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `pregnants`
 --
 ALTER TABLE `pregnants`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `prenatals`
 --
 ALTER TABLE `prenatals`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- AUTO_INCREMENT for table `reset_passwords`
 --
 ALTER TABLE `reset_passwords`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `vaccine_doses`
